@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Web Developer</title>
+  <meta name="description" content="Portfolio of a web developer — responsive projects, contact, and resume." />
+
+  <!-- Google Fonts (free) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --muted:#6b7280; --accent:#0b84ff; --glass: rgba(255,255,255,0.6);
+      --radius:14px; --maxw:980px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:32px; font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#f7f8fb 0%, #eef3ff 100%); color:#0f172a; -webkit-font-smoothing:antialiased;
+    }
+
+    .wrap{max-width:var(--maxw);margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:grid;place-items:center;color:#fff;font-weight:700;font-size:20px}
+    .name{font-weight:700}
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:600}
+    nav a.cta{background:var(--accent);color:#fff}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-bottom:28px}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 6px 20px rgba(11,132,255,0.06)}
+
+    .hero-left h1{margin:0 0 8px;font-size:28px}
+    .hero-left p{margin:0;color:var(--muted);line-height:1.6}
+
+    .skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .chip{padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--glass),#ffffff);border:1px solid rgba(15,23,42,0.04);font-weight:600;font-size:13px;color:var(--muted)}
+
+    .profile-card{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:16px;background:linear-gradient(135deg,#fff,#f2f7ff);display:grid;place-items:center;font-weight:700;font-size:34px;color:var(--accent)}
+    .small{font-size:14px;color:var(--muted)}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+    .project{padding:14px;border-radius:12px;border:1px solid rgba(15,23,42,0.04);background:linear-gradient(180deg,#fff,#fbfdff)}
+    .proj-title{font-weight:700;margin:0 0 6px}
+    .proj-desc{margin:0;color:var(--muted);font-size:14px}
+    .proj-meta{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+    .btn{padding:8px 12px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
+
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+      body{padding:18px}
+      header{gap:12px}
+    }
+
+    /* small helper styles for project images */
+    .screenshot{height:120px;border-radius:8px;background:linear-gradient(135deg,#eef6ff,#ffffff);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+
+    /* contact form */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(11,132,255,0.08);font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">Y</div>
+        <div>
+          <div class="name">Your Name</div>
+          <div class="small">Frontend Web Developer • HTML/CSS/JavaScript</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left card">
+        <h1>Hi — I'm <span style="color:var(--accent)">Your Name</span></h1>
+        <p>I build clean, responsive websites and small web apps. I'm a student learning modern frontend practices and focusing on fast, accessible sites that look great on mobile and desktop.</p>
+
+        <div class="skills">
+          <div class="chip">HTML</div>
+          <div class="chip">CSS</div>
+          <div class="chip">JavaScript</div>
+          <div class="chip">Responsive Design</div>
+          <div class="chip">Git & GitHub</div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px">
+          <a class="btn" href="#projects">See Projects</a>
+          <a style="padding:8px 12px;border-radius:10px;border:1px solid rgba(11,132,255,0.12);text-decoration:none;font-weight:700;color:var(--accent)" href="#contact">Hire Me</a>
+        </div>
+      </div>
+
+      <aside class="card profile-card">
+        <div class="avatar">YN</div>
+        <div style="font-weight:700">Your Name</div>
+        <div class="small">12th Grade • Aspiring Frontend Developer</div>
+        <div class="small">Location: Pakistan</div>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <a class="chip" href="#">GitHub</a>
+          <a class="chip" href="#">LinkedIn</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects">
+      <h2 style="margin-bottom:10px">Projects</h2>
+      <div class="projects">
+
+        <div class="project card">
+          <div class="screenshot">Portfolio Demo</div>
+          <h3 class="proj-title">Personal Portfolio (This Site)</h3>
+          <p class="proj-desc">A responsive single-page portfolio built with HTML, CSS and minimal JavaScript. Demonstrates layout, responsive grid, and accessible structure.</p>
+          <div class="proj-meta">
+            <small class="small">HTML • CSS • JS</small>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="#" onclick="openDemo(event,'https://your-demo-link')">Live</a>
+              <a style="padding:8px 12px;border-radius:10px;border:1px solid rgba(11,132,255,0.12);text-decoration:none;font-weight:700;color:var(--accent)" href="#" onclick="openDemo(event,'https://github.com/yourname/your-repo')">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project card">
+          <div class="screenshot">Landing</div>
+          <h3 class="proj-title">Landing Page — Product</h3>
+          <p class="proj-desc">Simple, fast-loading marketing landing page with responsive hero, feature grid, and contact CTA. Good for demonstrating layout and typography skills.</p>
+          <div class="proj-meta">
+            <small class="small">HTML • CSS</small>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="#">Live</a>
+              <a style="padding:8px 12px;border-radius:10px;border:1px solid rgba(11,132,255,0.12);text-decoration:none;font-weight:700;color:var(--accent)" href="#">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project card">
+          <div class="screenshot">JS App</div>
+          <h3 class="proj-title">To‑Do App (Vanilla JS)</h3>
+          <p class="proj-desc">Small JavaScript application showing DOM manipulation, localStorage persistence, and accessible interactions.</p>
+          <div class="proj-meta">
+            <small class="small">JavaScript</small>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="#">Live</a>
+              <a style="padding:8px 12px;border-radius:10px;border:1px solid rgba(11,132,255,0.12);text-decoration:none;font-weight:700;color:var(--accent)" href="#">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project card">
+          <div class="screenshot">Responsive</div>
+          <h3 class="proj-title">Responsive Grid Demo</h3>
+          <p class="proj-desc">A small demo showing responsive grid layouts and breakpoints — useful to show to clients who want mobile-first design.</p>
+          <div class="proj-meta">
+            <small class="small">CSS • Responsive</small>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="#">Live</a>
+              <a style="padding:8px 12px;border-radius:10px;border:1px solid rgba(11,132,255,0.12);text-decoration:none;font-weight:700;color:var(--accent)" href="#">Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:28px">
+      <h2>About</h2>
+      <div class="card" style="margin-top:10px;">
+        <p style="margin:0;color:var(--muted);line-height:1.7">
+          I'm a web development student (12th grade) building responsive websites using HTML, CSS and vanilla JavaScript. I focus on clean UI, accessibility, and fast performance. I'm comfortable using Git and GitHub to manage projects and collaborate.
+        </p>
+
+        <div style="display:flex;gap:14px;margin-top:14px;flex-wrap:wrap">
+          <div style="min-width:180px">
+            <strong>Contact</strong>
+            <div class="small">email: your.email@example.com</div>
+          </div>
+          <div style="min-width:180px">
+            <strong>Education</strong>
+            <div class="small">12th Grade (FBISE)</div>
+          </div>
+          <div style="min-width:180px">
+            <strong>Tooling</strong>
+            <div class="small">VS Code • Git • Chrome DevTools</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h2>Contact — Let's work together</h2>
+      <div class="card" style="margin-top:10px">
+        <form onsubmit="submitContact(event)">
+          <div class="contact-grid">
+            <input id="name" placeholder="Your name" required />
+            <input id="email" placeholder="Email" required />
+          </div>
+          <div style="margin-top:10px">
+            <input id="subject" placeholder="Subject (e.g., Website design)" />
+          </div>
+          <div style="margin-top:10px">
+            <textarea id="message" placeholder="Message" required></textarea>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn" type="submit">Send Message</button>
+          </div>
+        </form>
+        <div id="formResult" style="margin-top:12px;color:var(--muted)"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">Made with ❤️ • Your Name • <span id="year"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openDemo(e, url){
+      e.preventDefault();
+      if(!url) return alert('Replace the demo link in the code with your live URL or GitHub Pages link.');
+      window.open(url,'_blank');
+    }
+
+    function submitContact(e){
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var subject = document.getElementById('subject').value.trim();
+      var message = document.getElementById('message').value.trim();
+      if(!name || !email || !message) return;
+
+      // Since this is a static GitHub Pages site, we cannot send emails directly.
+      // We'll show a ready-to-copy email template + instructions.
+      var template = 'mailto:your.email@example.com'
+        + '?subject=' + encodeURIComponent(subject || 'Portfolio contact from ' + name)
+        + '&body=' + encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+message);
+
+      var result = document.getElementById('formResult');
+      result.innerHTML = 'Your message is ready. <a href="'+template+'" target="_blank">Click here to open your email client and send</a> or copy the following text:<pre style="white-space:pre-wrap">'+message+'</pre>';
+    }
+  </script>
+</body>
+</html>
